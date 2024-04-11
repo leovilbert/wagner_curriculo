@@ -17,6 +17,7 @@ body {
     line-height: 1.8rem;
     font-size: 0.9rem;
     color: #333333;
+    background-color: #eeeeee;
 }
 
 /* Estilo para o header */
@@ -24,13 +25,19 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 3rem 1rem 3rem;
+    background-color: #f0f0f0;
+}
+
+#social_media {
+    display: flex;
+    gap: .5rem;
 }
 
 /* Estilo para a div social_media */
-/*ANALISAR*/
-#social_media a{
+#social_media > a {
     color: #333;
+    font-size: 1rem;
 }
 
 /* Estilo para o conteúdo principal */
@@ -41,42 +48,68 @@ header {
 
 /* Estilo para a seção do perfil */
 #profile {
-    flex: 1;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    max-width: 24rem;
+}
+
+/* Estilo para o Sobre Mim e o texto */
+#profile > * {
+    text-align: center;
+    padding: .6rem;
 }
 
 /* Estilo para a seção de experiências */
-#experiences {
-    flex: 2;
+#experiences > h1 {
+    padding: 1rem;
+}
+
+#experience_boxs {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Distribuir os articles igualmente na linha */
+    justify-content: space-around; /* Distribuir os articles igualmente na linha */
+
 }
 
 /* Estilo para cada experiência */
-article {
-    width: calc(50% - 20px); /* Metade da largura da seção com margem */
-    margin-bottom: 20px; /* Espaço entre as caixas */
+#experience_boxs > article {
+    width: calc(50% - 2rem); /* Metade da largura da seção com margem */
+    margin-bottom: 2rem; /* Espaço entre as caixas */
     background-color: #f0f0f0; /* Cor de fundo para as caixas */
-    border-radius: 8px; /* Borda arredondada */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: .8rem; /* Borda arredondada */
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); /* Sombra suave */
     overflow: hidden; /* Evitar que o conteúdo ultrapasse a caixa */
+    padding: 0 1rem;
 }
 
 /* Estilo para o título do article */
 article h1 {
-    margin-top: 10px; /* Espaço acima do título */
+    margin-top: 1rem; /* Espaço acima do título */
 }
 
 /* Estilo para o texto do article */
 article p {
-    margin-bottom: 10px; /* Espaço abaixo do texto */
+    margin-bottom: 1rem; /* Espaço abaixo do texto */
 }
 
 /* Estilo para a seção de habilidades */
 #skills {
-    flex: 1;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+#skills > h1 {
+    padding: 1rem;
+}
+
+#skills > ul {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Estilo para o footer */
@@ -84,16 +117,36 @@ footer {
     text-align: center;
     background-color: #333; /* Cor de fundo do rodapé */
     color: #fff; /* Cor do texto do rodapé */
-    padding: 20px;
+    padding: 2rem;
     width: 100%;
 }
 
 /* Estilo para os ícones do footer */
 footer a {
     color: #fff;
-    margin: 0 10px;
+    margin: 0 1rem;
 }
 
 img {
     border-radius: 50%;
+}
+
+@media (max-width: 800px) {
+    #main {
+        flex-direction: column;
+    }
+
+    #profile {
+       
+    }
+
+    #experiences {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    #skills {
+
+    }
+
 }
