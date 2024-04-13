@@ -50,7 +50,6 @@ header {
 #profile {
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 1rem;
     max-width: 24rem;
 }
@@ -99,7 +98,7 @@ article p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    padding: 0 3rem;
 }
 
 #skills > h1 {
@@ -124,29 +123,39 @@ footer {
 /* Estilo para os ícones do footer */
 footer a {
     color: #fff;
-    margin: 0 1rem;
+    padding: 1rem;
 }
 
 img {
     border-radius: 50%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
     #main {
         flex-direction: column;
     }
 
     #profile {
-       
+       align-items: center;
+       max-width: max-content;
     }
 
-    #experiences {
+    #profile > p {
+        padding: 0 13rem;
+    }
+
+    h1, p {
+        text-align: center;
+    }
+
+    #experience_boxs {
         flex-wrap: nowrap;
         flex-direction: column;
+        align-items: center;
     }
 
     #skills {
-
+        padding: 0rem 2rem 2rem 2rem;
     }
 
 }
